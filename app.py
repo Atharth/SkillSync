@@ -339,22 +339,28 @@ def home_page():
             </div>
         </div>
     </div>
+
     <div class="reference-nav-links">
-        <a href="?nav=home" class="ref-nav-link active">⌂ <span>"home"]}</span></a>
+        <a href="?nav=home" class="ref-nav-link active">⌂ <span>{T["home"]}</span></a>
         <a href="?nav=about" class="ref-nav-link">ⓘ <span>{T["about"]}</span></a>
         <a href="?nav=how" class="ref-nav-link">⚙ <span>{T["how"]}</span></a>
+
         <div class="language-menu">
-            <span class="language-current">🌐 {"English" if lang == "en" else "मराठी" if lang == "mr" else "हिंदी"} ▾</span>
+            <span class="language-current">
+                🌐 {"English" if lang == "en" else "मराठी" if lang == "mr" else "हिंदी"} ▾
+            </span>
+
             <div class="language-dropdown">
                 <a href="?lang=en">English</a>
                 <a href="?lang=mr">मराठी</a>
                 <a href="?lang=hi">हिंदी</a>
             </div>
         </div>
+
         <a href="?nav=login" class="ref-login-link">♙ <span>{T["login"]}</span></a>
     </div>
 </div>
-        """)
+""")
 
     section = st.session_state.get("home_section", "home")
 
