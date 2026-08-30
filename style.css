@@ -1,0 +1,1049 @@
+/* ---------- GLOBAL ---------- */
+
+    .stApp {
+        background: #f7f9fc;
+    }
+
+    .block-container {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        max-width: 1400px;
+    }
+
+    /* ---------- TITLES ---------- */
+
+    .main-title {
+        font-size: 46px;
+        font-weight: 800;
+        color: #172033;
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        color: #667085;
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 25px;
+        font-weight: 750;
+        color: #172033;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    /* ---------- TOPBAR ---------- */
+
+    .topbar {
+        background: white;
+        padding: 18px 24px;
+        border-radius: 15px;
+        border: 1px solid #e5e7eb;
+        margin-bottom: 25px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+
+    .topbar-title {
+        font-size: 22px;
+        font-weight: 750;
+        color: #172033;
+    }
+
+    .topbar-subtitle {
+        font-size: 14px;
+        color: #667085;
+        margin-top: 4px;
+    }
+
+    /* ---------- CARDS ---------- */
+
+    .card {
+        background: white;
+        border-radius: 16px;
+        padding: 24px;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        height: 100%;
+    }
+
+    .card-title {
+        font-size: 20px;
+        font-weight: 750;
+        color: #172033;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        color: #667085;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* ---------- METRICS ---------- */
+
+    .metric-card {
+        background: white;
+        border-radius: 16px;
+        padding: 22px;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+
+    .metric-label {
+        color: #667085;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .metric-value {
+        color: #172033;
+        font-size: 32px;
+        font-weight: 800;
+        margin-top: 5px;
+    }
+
+    .metric-change {
+        color: #12b76a;
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    /* ---------- SKILLS ---------- */
+
+    .skill-card {
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 13px;
+        padding: 17px;
+        margin-bottom: 10px;
+    }
+
+    .skill-name {
+        font-weight: 700;
+        color: #172033;
+        font-size: 15px;
+    }
+
+    .skill-gap {
+        color: #d92d20;
+        font-weight: 700;
+        float: right;
+    }
+
+    /* ---------- ALERTS ---------- */
+
+    .gap-card {
+        background: #fff5f4;
+        border: 1px solid #fecdca;
+        border-radius: 14px;
+        padding: 18px;
+        margin-bottom: 12px;
+    }
+
+    .warning-card {
+        background: #fffaeb;
+        border: 1px solid #fedf89;
+        border-radius: 14px;
+        padding: 18px;
+        margin-bottom: 12px;
+    }
+
+    .success-card {
+        background: #ecfdf3;
+        border: 1px solid #abefc6;
+        border-radius: 14px;
+        padding: 18px;
+        margin-bottom: 12px;
+    }
+
+    .info-card {
+        background: #eff8ff;
+        border: 1px solid #b2ddff;
+        border-radius: 14px;
+        padding: 18px;
+        margin-bottom: 12px;
+    }
+
+    /* ---------- RECOMMENDATIONS ---------- */
+
+    .recommendation {
+        background: white;
+        border-left: 5px solid #175cd3;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 14px;
+        border-top: 1px solid #e5e7eb;
+        border-right: 1px solid #e5e7eb;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .recommendation-title {
+        font-size: 17px;
+        font-weight: 750;
+        color: #172033;
+    }
+
+    .recommendation-text {
+        color: #667085;
+        line-height: 1.6;
+        margin-top: 7px;
+    }
+
+    .priority-high {
+        display: inline-block;
+        background: #fee4e2;
+        color: #b42318;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    .priority-medium {
+        display: inline-block;
+        background: #fef0c7;
+        color: #b54708;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    /* ---------- PROGRAM CARD ---------- */
+
+    .program-card {
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 12px;
+    }
+
+    .program-name {
+        font-size: 18px;
+        font-weight: 750;
+        color: #172033;
+    }
+
+    .program-score {
+        font-size: 28px;
+        font-weight: 800;
+        margin-top: 8px;
+    }
+
+    /* ---------- REPORT ---------- */
+
+    .report-box {
+        background: white;
+        border: 1px solid #d0d5dd;
+        border-radius: 15px;
+        padding: 30px;
+        margin-top: 15px;
+    }
+
+    .report-title {
+        font-size: 27px;
+        font-weight: 800;
+        color: #172033;
+    }
+
+    .report-heading {
+        font-size: 19px;
+        font-weight: 750;
+        color: #344054;
+        margin-top: 22px;
+    }
+
+    /* ---------- UPLOAD ---------- */
+
+    .upload-box {
+        background: white;
+        border: 2px dashed #b2ddff;
+        border-radius: 16px;
+        padding: 25px;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    /* ---------- BUTTONS ---------- */
+
+    .stButton > button {
+        border-radius: 10px;
+        font-weight: 650;
+        min-height: 42px;
+    }
+
+/* ============================================================
+   SKILLSYNC HOME PAGE - GOVERNMENT STYLE
+   ============================================================ */
+.gov-navbar {
+    background: #ffffff;
+    border: 1px solid #e4e7ec;
+    border-radius: 14px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    margin-bottom: 12px;
+}
+.brand-wrap { display:flex; align-items:center; gap:12px; }
+.brand-mark {
+    width:42px; height:42px; border-radius:10px;
+    background:#fff3e8; display:flex; align-items:center; justify-content:center;
+    font-size:22px;
+}
+.brand-name { font-size:22px; font-weight:850; color:#173b67; line-height:1.05; }
+.brand-sub { font-size:11px; color:#667085; margin-top:3px; }
+.nav-note { font-size:12px; color:#667085; font-weight:600; }
+.hero-heading { text-align:center; padding:28px 10px 22px; }
+.hero-title { font-size:52px; font-weight:900; color:#ef6c00; letter-spacing:-1px; }
+.hero-subtitle { font-size:22px; font-weight:750; color:#173b67; margin-top:3px; }
+.hero-description { font-size:14px; color:#667085; line-height:1.6; margin-top:9px; }
+.image-showcase { position:relative; }
+.hero-image { width:100%; height:310px; object-fit:cover; border-radius:18px; display:block; box-shadow:0 10px 30px rgba(23,59,103,.14); }
+.image-caption { background:rgba(13,42,72,.92); color:white; border-radius:12px; padding:14px 17px; margin:-66px 18px 18px; position:relative; font-size:13px; line-height:1.5; }
+.second-image-card { background:white; border:1px solid #e4e7ec; border-radius:16px; padding:10px; display:flex; gap:14px; align-items:center; box-shadow:0 5px 18px rgba(0,0,0,.05); }
+.second-image-card img { width:135px; height:92px; object-fit:cover; border-radius:11px; }
+.second-image-card div { color:#667085; font-size:13px; line-height:1.5; }
+.second-image-card b { color:#173b67; font-size:14px; }
+.login-card-heading { background:white; border:1px solid #e4e7ec; border-bottom:0; border-radius:18px 18px 0 0; padding:25px 25px 10px; margin-top:0; }
+.welcome-title { font-size:25px; font-weight:850; color:#172033; }
+.welcome-subtitle { color:#667085; font-size:13px; margin-top:4px; }
+.quick-title { text-align:center; color:#667085; font-size:10px; font-weight:800; letter-spacing:.7px; margin:20px 0 9px; }
+.rural-note { background:#f8fbff; border:1px solid #d8e8f7; border-radius:12px; padding:13px 14px; color:#667085; font-size:12px; line-height:1.55; margin-top:14px; }
+.rural-note b { color:#173b67; }
+.large-info { padding:24px; font-size:15px; line-height:1.7; }
+.process-card { background:white; border:1px solid #e4e7ec; border-radius:15px; padding:18px; text-align:center; min-height:145px; box-shadow:0 4px 14px rgba(0,0,0,.04); color:#172033; }
+.process-card p { color:#667085; font-size:12px; line-height:1.5; margin-bottom:0; }
+.process-number { width:34px; height:34px; border-radius:50%; background:#173b67; color:white; display:flex; align-items:center; justify-content:center; margin:0 auto 10px; font-weight:800; }
+.feature-icon { font-size:32px; margin-bottom:8px; }
+
+/* Make Streamlit widgets match the clean government-style card */
+[data-testid="stTextInput"] { margin-bottom: 6px; }
+.stButton > button { border-radius:10px; font-weight:700; min-height:42px; }
+
+@media (max-width: 900px) {
+    .gov-navbar { flex-direction:column; align-items:flex-start; gap:8px; }
+    .nav-note { display:none; }
+    .hero-title { font-size:42px; }
+    .hero-subtitle { font-size:18px; }
+    .hero-image { height:250px; }
+}
+
+
+/* ============================================================
+   SKILLSYNC HOME — EXACT REFERENCE-STYLE LAYOUT
+   ============================================================ */
+.stApp {
+    background: linear-gradient(180deg, #f8fbff 0%, #eef5fc 100%);
+}
+
+.block-container {
+    max-width: 1500px;
+    padding-top: 0.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.reference-navbar {
+    width: 100%;
+    min-height: 78px;
+    background: #ffffff;
+    border: 1px solid #e4e7ec;
+    border-radius: 16px;
+    padding: 8px 18px 8px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 5px 18px rgba(23,59,103,.08);
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.nav-brand-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.maha-emblem {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 50%;
+    border: 3px solid #f28c28;
+    color: #e87516;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 900;
+    background: #fffaf4;
+}
+
+.maha-text { line-height: 1.15; white-space: nowrap; }
+.maha-title { color: #173b67; font-size: 17px; font-weight: 850; }
+.maha-dept { color: #344054; font-size: 11px; margin-top: 3px; }
+.maha-marathi { color: #344054; font-size: 12px; margin-top: 2px; }
+
+.brand-divider {
+    width: 1px;
+    height: 50px;
+    background: #dfe3e8;
+    margin: 0 10px;
+}
+
+.skillsync-logo { display:flex; align-items:center; gap:9px; white-space:nowrap; }
+.ss-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: linear-gradient(145deg,#eaf3ff,#fff5e9);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    line-height:.7;
+    color:#1769d1;
+}
+.ss-person { font-size:18px; }
+.ss-book { font-size:21px; color:#f47716; transform:translateY(-1px); }
+.ss-name { font-size:28px; font-weight:900; color:#163d72; line-height:1; }
+.ss-name b { color:#f47716; }
+.ss-tagline { font-size:10px; color:#667085; margin-top:3px; }
+
+.reference-nav-links { display:flex; align-items:center; gap:6px; white-space:nowrap; }
+.ref-nav-link, .language-menu {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 2px;
+}
+.language-current {
+    color: #173b67;
+    font-size: 14px;
+    font-weight: 750;
+    padding: 10px 11px;
+    border-radius: 9px;
+    cursor: default;
+}
+.language-menu:hover .language-current { background: #f4f8fd; }
+.language-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 3px);
+    min-width: 125px;
+    background: #ffffff;
+    border: 1px solid #dce6f2;
+    border-radius: 10px;
+    box-shadow: 0 10px 24px rgba(23,59,103,.14);
+    padding: 6px;
+    z-index: 1000;
+}
+.language-menu:hover .language-dropdown { display: block; }
+.language-dropdown a {
+    display: block;
+    text-decoration: none !important;
+    color: #173b67 !important;
+    font-size: 14px;
+    font-weight: 650;
+    padding: 9px 11px;
+    border-radius: 7px;
+}
+.language-dropdown a:hover { background: #eef5ff; color: #1456b8 !important; }
+
+.ref-login-link {
+    text-decoration:none !important;
+    color:#173b67 !important;
+    font-size:15px;
+    font-weight:750;
+    padding:12px 17px;
+    border-radius:9px;
+    transition:all .15s ease;
+}
+.ref-nav-link:hover { background:#f4f8fd; }
+.ref-nav-link.active { color:#ef6c00 !important; position:relative; }
+.ref-nav-link.active::after {
+    content:"";
+    position:absolute;
+    left:18px;
+    right:18px;
+    bottom:3px;
+    height:3px;
+    border-radius:4px;
+    background:#ef6c00;
+}
+.ref-login-link {
+    background:#1456b8;
+    color:#fff !important;
+    padding:12px 22px;
+    margin-left:8px;
+    box-shadow:0 4px 10px rgba(20,86,184,.18);
+}
+.ref-login-link:hover { background:#0f489c; }
+
+.reference-hero-title { padding: 22px 0 18px; }
+.reference-title {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+    color:#123d76;
+}
+.reference-title span { color:#f47716; }
+.reference-subtitle {
+    color:#123d76;
+    font-size:22px;
+    font-weight:800;
+    margin-top:7px;
+}
+.reference-orange-line { width:96px; height:4px; border-radius:4px; background:#f47716; margin:20px 0 17px; }
+.reference-description { color:#172b4d; font-size:16px; line-height:1.75; }
+
+.reference-visual-card {
+    width:100%;
+    overflow:hidden;
+    border-radius:18px;
+    background:#fff;
+    border:1px solid #dce6f2;
+    box-shadow:0 12px 32px rgba(23,59,103,.14);
+}
+.reference-hero-image {
+    width:100%;
+    height:390px;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+}
+
+.reference-login-card {
+    background:#fff;
+    border:1px solid #e1e6ed;
+    border-radius:18px 18px 0 0;
+    padding:24px 26px 8px;
+    box-shadow:0 10px 28px rgba(23,59,103,.08);
+}
+.reference-login-top { display:flex; align-items:center; gap:16px; }
+.welcome-icon {
+    width:60px;
+    height:60px;
+    flex:0 0 60px;
+    border-radius:50%;
+    border:2px solid #8db4e9;
+    color:#1260c8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:31px;
+}
+.welcome-title { color:#102e59; font-size:25px; font-weight:900; line-height:1.2; }
+.welcome-subtitle { color:#667085; font-size:13px; margin-top:5px; }
+.forgot-password { text-align:center; color:#1456b8; font-size:13px; font-weight:650; padding:8px 0 3px; }
+.or-login { display:flex; align-items:center; gap:10px; color:#667085; font-size:11px; font-weight:800; margin:17px 0 10px; }
+.or-login span { height:1px; flex:1; background:#dfe3e8; }
+
+/* Home-page Streamlit inputs/buttons */
+[data-testid="stTextInput"] label { color:#173b67 !important; font-weight:750 !important; font-size:13px !important; }
+[data-testid="stTextInput"] input {
+    border:1px solid #d0d5dd !important;
+    border-radius:10px !important;
+    min-height:44px !important;
+    background:#fff !important;
+}
+[data-testid="stTextInput"] input:focus { border-color:#4c8ed9 !important; box-shadow:0 0 0 2px rgba(76,142,217,.12) !important; }
+
+.reference-login-card + div + div { margin-top:0; }
+.stButton > button {
+    border-radius:10px !important;
+    min-height:43px !important;
+    font-weight:750 !important;
+    border:1px solid #d0d5dd !important;
+    background:#fff !important;
+    color:#173b67 !important;
+    transition:all .15s ease !important;
+}
+.stButton > button:hover { border-color:#1769d1 !important; color:#1456b8 !important; }
+
+/* The primary login button follows the reference orange CTA */
+button[kind="primary"] {
+    background:linear-gradient(90deg,#ff7900,#ff5b00) !important;
+    color:#fff !important;
+    border:none !important;
+    box-shadow:0 5px 12px rgba(255,102,0,.20) !important;
+}
+
+.reference-feature-strip {
+    margin-top:14px;
+    background:#fff;
+    border:1px solid #dfe5ec;
+    border-radius:17px;
+    min-height:108px;
+    padding:16px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    gap:12px;
+    box-shadow:0 7px 22px rgba(23,59,103,.07);
+}
+.reference-feature { display:flex; align-items:center; gap:13px; flex:1; min-width:0; }
+.reference-feature b { color:#173b67; font-size:14px; }
+.reference-feature p { color:#667085; font-size:12px; line-height:1.45; margin:5px 0 0; }
+.feature-separator { width:1px; height:62px; background:#dfe3e8; }
+.feature-round { width:54px; height:54px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex:0 0 54px; font-size:28px; font-weight:800; }
+.blue-round { background:#eaf3ff; color:#1769d1; }
+.green-round { background:#e5f7f1; color:#14946f; }
+.orange-round { background:#fff0df; color:#f47716; }
+.purple-round { background:#f1eafa; color:#7141b5; }
+
+.reference-footer {
+    margin-top:12px;
+    background:#f8fbff;
+    border:1px solid #dfe8f3;
+    border-radius:12px;
+    min-height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    color:#667085;
+    font-size:14px;
+    text-align:center;
+}
+.reference-footer b { color:#1456b8; }
+.footer-shield { color:#1456b8; font-size:22px; }
+
+@media (max-width: 1100px) {
+    .reference-navbar { align-items:flex-start; }
+    .nav-brand-area { flex-wrap:wrap; }
+    .reference-nav-links { flex-wrap:wrap; justify-content:flex-end; }
+    .reference-title { font-size:48px; }
+    .reference-hero-image { height:330px; }
+}
+
+@media (max-width: 800px) {
+    .block-container { padding-left:1rem; padding-right:1rem; }
+    .reference-navbar { flex-direction:column; align-items:stretch; }
+    .reference-nav-links { justify-content:center; }
+    .maha-text { white-space:normal; }
+    .brand-divider { display:none; }
+    .reference-title { font-size:42px; }
+    .reference-subtitle { font-size:18px; }
+    .reference-hero-image { height:260px; }
+    .reference-feature-strip { flex-direction:column; align-items:stretch; }
+    .feature-separator { width:100%; height:1px; }
+}
+
+
+/* ============================================================
+   SKILLSYNC HOME — FINAL REFERENCE LAYOUT OVERRIDES
+   Login starts at the top beside the hero heading.
+   ============================================================ */
+.reference-hero-title {
+    padding: 24px 0 18px;
+}
+.gov-initiative-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 13px;
+    margin-bottom: 12px;
+    border: 1px solid #c8d9ee;
+    border-radius: 999px;
+    background: #f7fbff;
+    color: #1456b8;
+    font-size: 12px;
+    font-weight: 800;
+}
+.reference-title {
+    font-size: 56px;
+}
+.reference-login-card {
+    border-radius: 18px;
+}
+/* The Streamlit container holds the entire login form. */
+div.st-key-home_login_card {
+    background: rgba(255,255,255,.97);
+    border: 1px solid #e1e6ed;
+    border-radius: 18px;
+    padding: 25px 28px 20px;
+    box-shadow: 0 12px 30px rgba(23,59,103,.10);
+    margin-top: 24px;
+}
+div.st-key-home_login_card [data-testid="stTextInput"] {
+    margin-top: 7px;
+    margin-bottom: 4px;
+}
+div.st-key-home_login_card .stButton {
+    margin-top: 8px;
+}
+div.st-key-home_login_card button[kind="primary"] {
+    min-height: 48px !important;
+    font-size: 16px !important;
+}
+div.st-key-home_login_card .or-login {
+    margin-top: 18px;
+}
+.reference-visual-card {
+    margin-top: 2px;
+}
+.reference-hero-image {
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+@media (max-width: 900px) {
+    div.st-key-home_login_card {
+        margin-top: 0;
+    }
+}
+
+/* ============================================================
+   SKILLSYNC SUB-PAGES — MATCH HOME PAGE THEME
+   Blue + White + Saffron/Orange visual language
+   ============================================================ */
+
+:root {
+    --ss-navy: #123d76;
+    --ss-blue: #1456b8;
+    --ss-blue-dark: #0f489c;
+    --ss-orange: #f47716;
+    --ss-orange-dark: #e87516;
+    --ss-bg: #f8fbff;
+    --ss-bg-soft: #eef5fc;
+    --ss-text: #172b4d;
+    --ss-muted: #667085;
+    --ss-border: #dce6f2;
+    --ss-white: #ffffff;
+}
+
+/* ---------- GLOBAL SUB-PAGE BACKGROUND ---------- */
+.stApp {
+    background: linear-gradient(180deg, var(--ss-bg) 0%, var(--ss-bg-soft) 100%);
+}
+
+.block-container {
+    max-width: 1500px;
+}
+
+/* ---------- PAGE TITLES ---------- */
+.main-title,
+.section-title {
+    color: var(--ss-navy) !important;
+}
+
+.main-title {
+    font-weight: 900 !important;
+    letter-spacing: -0.8px;
+}
+
+.subtitle,
+.topbar-subtitle,
+.card-text,
+.metric-label,
+.recommendation-text {
+    color: var(--ss-muted) !important;
+}
+
+.section-title {
+    font-weight: 850 !important;
+}
+
+/* ---------- TOPBAR / PAGE HEADER ---------- */
+.topbar {
+    background: rgba(255,255,255,.98) !important;
+    border: 1px solid var(--ss-border) !important;
+    border-top: 4px solid var(--ss-orange) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 24px rgba(23,59,103,.08) !important;
+}
+
+.topbar-title {
+    color: var(--ss-navy) !important;
+    font-weight: 850 !important;
+}
+
+/* ---------- COMMON CARDS ---------- */
+.card,
+.metric-card,
+.skill-card,
+.program-card,
+.report-box,
+.process-card,
+.second-image-card {
+    background: rgba(255,255,255,.98) !important;
+    border: 1px solid var(--ss-border) !important;
+    box-shadow: 0 6px 20px rgba(23,59,103,.06) !important;
+}
+
+.card:hover,
+.metric-card:hover,
+.program-card:hover,
+.process-card:hover {
+    border-color: #bfd2e8 !important;
+    box-shadow: 0 10px 26px rgba(23,59,103,.10) !important;
+    transform: translateY(-1px);
+    transition: all .18s ease;
+}
+
+.card-title,
+.program-name,
+.skill-name,
+.report-title,
+.recommendation-title {
+    color: var(--ss-navy) !important;
+}
+
+/* ---------- METRICS ---------- */
+.metric-card {
+    border-top: 3px solid var(--ss-blue) !important;
+}
+
+.metric-value {
+    color: var(--ss-navy) !important;
+}
+
+.metric-change {
+    color: #16804b !important;
+}
+
+/* ---------- SKILL / GAP CARDS ---------- */
+.skill-card {
+    border-left: 4px solid var(--ss-blue) !important;
+}
+
+.gap-card {
+    background: #fff8f3 !important;
+    border: 1px solid #f7c9a6 !important;
+    border-left: 4px solid var(--ss-orange) !important;
+}
+
+.warning-card {
+    background: #fffaf3 !important;
+    border: 1px solid #f3d39c !important;
+    border-left: 4px solid #f59e0b !important;
+}
+
+.success-card {
+    background: #f2fbf6 !important;
+    border: 1px solid #b7e4c7 !important;
+    border-left: 4px solid #16804b !important;
+}
+
+.info-card {
+    background: #f3f8ff !important;
+    border: 1px solid #c5dbf4 !important;
+    border-left: 4px solid var(--ss-blue) !important;
+}
+
+.skill-gap {
+    color: #c43d2f !important;
+}
+
+/* ---------- RECOMMENDATIONS ---------- */
+.recommendation {
+    border-left: 5px solid var(--ss-orange) !important;
+    border-top: 1px solid var(--ss-border) !important;
+    border-right: 1px solid var(--ss-border) !important;
+    border-bottom: 1px solid var(--ss-border) !important;
+    background: #fff !important;
+}
+
+.priority-high {
+    background: #fff0e6 !important;
+    color: #b94b0a !important;
+}
+
+.priority-medium {
+    background: #fff8df !important;
+    color: #a76500 !important;
+}
+
+/* ---------- UPLOAD ---------- */
+.upload-box {
+    background: rgba(255,255,255,.98) !important;
+    border: 2px dashed #a9c6e5 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 5px 18px rgba(23,59,103,.05) !important;
+}
+
+.upload-box b {
+    color: var(--ss-navy) !important;
+}
+
+.upload-box span {
+    color: var(--ss-muted) !important;
+}
+
+/* ---------- REPORT ---------- */
+.report-box {
+    border-top: 4px solid var(--ss-orange) !important;
+}
+
+.report-heading {
+    color: var(--ss-navy) !important;
+}
+
+/* ---------- PROCESS CARDS ---------- */
+.process-card {
+    color: var(--ss-navy) !important;
+}
+
+.process-number {
+    background: var(--ss-blue) !important;
+}
+
+/* ---------- STREAMLIT INPUTS ---------- */
+[data-testid="stTextInput"] label,
+[data-testid="stTextArea"] label,
+[data-testid="stSelectbox"] label,
+[data-testid="stMultiSelect"] label,
+[data-testid="stFileUploader"] label,
+[data-testid="stNumberInput"] label {
+    color: var(--ss-text) !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea,
+[data-testid="stNumberInput"] input {
+    background: #ffffff !important;
+    color: var(--ss-text) !important;
+    border: 1px solid #cbd9e8 !important;
+    border-radius: 10px !important;
+}
+
+[data-testid="stTextInput"] input:focus,
+[data-testid="stTextArea"] textarea:focus,
+[data-testid="stNumberInput"] input:focus {
+    border-color: var(--ss-blue) !important;
+    box-shadow: 0 0 0 2px rgba(20,86,184,.10) !important;
+}
+
+/* ---------- SELECT BOX ---------- */
+[data-testid="stSelectbox"] > div > div {
+    background: #ffffff !important;
+    border-color: #cbd9e8 !important;
+    border-radius: 10px !important;
+}
+
+/* ---------- BUTTONS ---------- */
+.stButton > button,
+.stDownloadButton > button {
+    border-radius: 10px !important;
+    font-weight: 750 !important;
+    min-height: 42px !important;
+    border: 1px solid #c5d5e7 !important;
+    background: #ffffff !important;
+    color: var(--ss-navy) !important;
+    transition: all .16s ease !important;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+    border-color: var(--ss-blue) !important;
+    color: var(--ss-blue) !important;
+    background: #f4f8fd !important;
+    transform: translateY(-1px);
+}
+
+.stButton > button[kind="primary"] {
+    background: var(--ss-orange) !important;
+    border-color: var(--ss-orange) !important;
+    color: #ffffff !important;
+    box-shadow: 0 5px 14px rgba(244,119,22,.20) !important;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background: var(--ss-orange-dark) !important;
+    border-color: var(--ss-orange-dark) !important;
+    color: #ffffff !important;
+}
+
+/* ---------- PROGRESS ---------- */
+[data-testid="stProgressBar"] > div > div {
+    background: var(--ss-orange) !important;
+}
+
+/* ---------- TABS ---------- */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 5px;
+    border-bottom: 1px solid var(--ss-border);
+}
+
+.stTabs [data-baseweb="tab"] {
+    color: var(--ss-muted) !important;
+    font-weight: 700 !important;
+}
+
+.stTabs [aria-selected="true"] {
+    color: var(--ss-blue) !important;
+}
+
+/* ---------- DATAFRAMES / TABLES ---------- */
+[data-testid="stDataFrame"] {
+    border: 1px solid var(--ss-border) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+/* ---------- ALERTS ---------- */
+[data-testid="stAlert"] {
+    border-radius: 12px !important;
+}
+
+/* ---------- FILE UPLOADER ---------- */
+[data-testid="stFileUploaderDropzone"] {
+    background: #ffffff !important;
+    border: 1px dashed #a9c6e5 !important;
+    border-radius: 12px !important;
+}
+
+/* ---------- DIVIDERS ---------- */
+hr {
+    border-color: var(--ss-border) !important;
+}
+
+/* ---------- SUB-PAGE MOBILE ---------- */
+@media (max-width: 900px) {
+    .main-title { font-size: 38px !important; }
+    .section-title { font-size: 22px !important; }
+    .topbar { padding: 16px !important; }
+    .metric-value { font-size: 27px !important; }
+}
+
+/* ============================================================
+   SIGN UP LINK - SAME HOME PAGE THEME
+   ============================================================ */
+.signup-area {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.signup-area-text {
+    color: #667085;
+    font-weight: 400;
+}
+.signup-link {
+    color: #1456b8 !important;
+    font-weight: 700;
+    text-decoration: none !important;
+    cursor: pointer;
+    margin-left: 4px;
+}
+.signup-link:hover {
+    color: #f47716 !important;
+    text-decoration: underline !important;
+}
+.standalone-signup {
+    max-width: 520px;
+    margin: 18px auto 12px;
+}
