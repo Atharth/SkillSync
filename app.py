@@ -340,7 +340,7 @@ def home_page():
         </div>
     </div>
     <div class="reference-nav-links">
-        <a href="?nav=home" class="ref-nav-link active">⌂ <span>{T["home"]}</span></a>
+        <a href="?nav=home" class="ref-nav-link active">⌂ <span>"home"]}</span></a>
         <a href="?nav=about" class="ref-nav-link">ⓘ <span>{T["about"]}</span></a>
         <a href="?nav=how" class="ref-nav-link">⚙ <span>{T["how"]}</span></a>
         <div class="language-menu">
@@ -476,7 +476,7 @@ def home_page():
     # ========================================================
     if section == "about":
         st.html('<div class="section-title">About SkillSync</div>')
-        st.html("""
+        st.html(f"""
 <div class="info-card large-info">
     <b>Connecting education with real-world skill needs.</b><br><br>
     SkillSync reads curriculum content, identifies skills, compares them
