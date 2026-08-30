@@ -603,11 +603,9 @@ def role_selection_page():
                 go_to(target)
 
 
-
 # ============================================================
 # GOVERNMENT DASHBOARD
 # ============================================================
-
 
 def government_dashboard():
 
@@ -626,6 +624,8 @@ def government_dashboard():
         """,
         unsafe_allow_html=True,
     )
+
+    # ---------- NAVIGATION ----------
 
     nav1, nav2, nav3, nav4, nav5 = st.columns(5)
 
@@ -656,96 +656,729 @@ def government_dashboard():
 
     st.write("")
 
+    # ---------- DEFAULT SECTION ----------
+
     if "gov_section" not in st.session_state:
         st.session_state.gov_section = "overview"
 
-    # ========================================================
-    # GOVERNMENT DASHBOARD CONTENT
-    # ========================================================
-
     section = st.session_state.gov_section
+
+    # ========================================================
+    # OVERVIEW
+    # ========================================================
 
     if section == "overview":
 
         st.markdown(
-            '<div class="section-title">📊 Overview</div>',
+            '<div class="section-title">📊 Government Skill Overview</div>',
             unsafe_allow_html=True
         )
+
+        # ---------- METRICS ----------
 
         col1, col2, col3, col4 = st.columns(4)
 
         with col1:
-            st.metric("Programs Analyzed", "24")
+            st.metric(
+                "Programs Analyzed",
+                "24",
+                "+6 this year"
+            )
 
         with col2:
-            st.metric("Skills Identified", "156")
+            st.metric(
+                "Skills Identified",
+                "156",
+                "+18"
+            )
 
         with col3:
-            st.metric("Industry Skills", "82")
+            st.metric(
+                "Industry Skills",
+                "82",
+                "+12"
+            )
 
         with col4:
-            st.metric("Skill Gaps", "31")
+            st.metric(
+                "Skill Gaps",
+                "31",
+                "-8"
+            )
+
+        st.write("")
+
+        # ---------- CHART DATA ----------
+
+        program_data = {
+            "Program": [
+                "Computer Science",
+                "Information Technology",
+                "Electronics",
+                "Mechanical",
+                "Civil",
+                "Management"
+            ],
+            "Skill Match": [
+                82,
+                76,
+                68,
+                61,
+                57,
+                72
+            ]
+        }
+
+        program_df = __import__("pandas").DataFrame(program_data)
+
+        # ---------- CHART 1 ----------
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+
+            st.markdown(
+                "### 📈 Program Industry Alignment"
+            )
+
+            fig = px.bar(
+                program_df,
+                x="Program",
+                y="Skill Match",
+                title="Industry Skill Match (%)",
+                text="Skill Match"
+            )
+
+            fig.update_traces(
+                textposition="outside"
+            )
+
+            fig.update_layout(
+                yaxis_range=[0, 100],
+                xaxis_title="Academic Program",
+                yaxis_title="Skill Match (%)",
+                height=400
+            )
+
+            st.plotly_chart(
+                fig,
+                use_container_width=True
+            )
+
+        # ---------- CHART 2 ----------
+
+        with col2:
+
+            st.markdown(
+                "### 🎯 Skill Gap Distribution"
+            )
+
+            gap_data = {
+                "Category": [
+                    "Technical Skills",
+                    "Cloud & DevOps",
+                    "AI & Data",
+                    "Soft Skills"
+                ],
+                "Gaps": [
+                    12,
+                    8,
+                    7,
+                    4
+                ]
+            }
+
+            gap_df = __import__("pandas").DataFrame(gap_data)
+
+            fig2 = px.pie(
+                gap_df,
+                names="Category",
+                values="Gaps",
+                title="31 Identified Skill Gaps",
+                hole=0.45
+            )
+
+            fig2.update_layout(
+                height=400
+            )
+
+            st.plotly_chart(
+                fig2,
+                use_container_width=True
+            )
+
+        # ---------- DETAILED INSIGHT ----------
+
+        st.markdown(
+            '<div class="section-title">🔎 Key Insights</div>',
+            unsafe_allow_html=True
+        )
+
+        insight1, insight2, insight3 = st.columns(3)
+
+        with insight1:
+
+            st.markdown(
+                """
+                <div class="info-card">
+                    <b>🏆 Strongest Alignment</b><br><br>
+                    Computer Science programs show the highest
+                    industry alignment with an average skill match
+                    of <b>82%</b>.
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+        with insight2:
+
+            st.markdown(
+                """
+                <div class="info-card">
+                    <b>⚠️ Major Skill Gap</b><br><br>
+                    Cloud Computing and DevOps represent one of the
+                    largest areas requiring curriculum improvement.
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+        with insight3:
+
+            st.markdown(
+                """
+                <div class="info-card">
+                    <b>💡 Priority Area</b><br><br>
+                    AI, Data Science and modern development skills
+                    should receive greater practical exposure.
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+        # ---------- SUMMARY ----------
 
         st.markdown(
             """
             <div class="info-card large-info">
                 <b>Government Workforce Skill Intelligence</b><br><br>
                 SkillSync helps government institutions understand
-                curriculum-to-industry alignment and identify priority
-                skill gaps across academic programs.
+                curriculum-to-industry alignment, monitor emerging
+                skill requirements and identify priority skill gaps
+                across academic programs.
             </div>
             """,
             unsafe_allow_html=True,
         )
 
+    # ========================================================
+    # PROGRAMS
+    # ========================================================
+
     elif section == "programs":
 
         st.markdown(
-            '<div class="section-title">🏫 Programs</div>',
+            '<div class="section-title">🏫 Program Analysis</div>',
             unsafe_allow_html=True
         )
 
-        st.info("Program-level curriculum and skill alignment analysis.")
+        program_data = {
+            "Program": [
+                "Computer Science",
+                "Information Technology",
+                "Electronics",
+                "Mechanical",
+                "Civil",
+                "Management"
+            ],
+            "Programs": [
+                5,
+                4,
+                4,
+                4,
+                3,
+                4
+            ],
+            "Skill Match": [
+                82,
+                76,
+                68,
+                61,
+                57,
+                72
+            ],
+            "Skill Gaps": [
+                4,
+                6,
+                7,
+                8,
+                9,
+                5
+            ]
+        }
+
+        df = __import__("pandas").DataFrame(program_data)
+
+        # ---------- PROGRAM METRICS ----------
+
+        c1, c2, c3 = st.columns(3)
+
+        with c1:
+            st.metric("Total Programs", "24")
+
+        with c2:
+            st.metric("Highest Match", "82%")
+
+        with c3:
+            st.metric("Programs Requiring Review", "9")
+
+        st.write("")
+
+        # ---------- BAR CHART ----------
+
+        st.markdown(
+            "### 📊 Program-wise Industry Alignment"
+        )
+
+        fig = px.bar(
+            df,
+            x="Program",
+            y="Skill Match",
+            text="Skill Match",
+            title="Industry Alignment by Program"
+        )
+
+        fig.update_traces(
+            textposition="outside"
+        )
+
+        fig.update_layout(
+            yaxis_range=[0, 100],
+            yaxis_title="Industry Skill Match (%)",
+            xaxis_title="Academic Program",
+            height=450
+        )
+
+        st.plotly_chart(
+            fig,
+            use_container_width=True
+        )
+
+        # ---------- TABLE ----------
+
+        st.markdown(
+            "### 📋 Program Performance Details"
+        )
+
+        display_df = df.rename(
+            columns={
+                "Program": "Academic Program",
+                "Programs": "Programs Analyzed",
+                "Skill Match": "Industry Match (%)",
+                "Skill Gaps": "Skill Gaps"
+            }
+        )
+
+        st.dataframe(
+            display_df,
+            use_container_width=True,
+            hide_index=True
+        )
+
+    # ========================================================
+    # SKILL DEMAND
+    # ========================================================
 
     elif section == "demand":
 
         st.markdown(
-            '<div class="section-title">📈 Skill Demand</div>',
+            '<div class="section-title">📈 Industry Skill Demand</div>',
             unsafe_allow_html=True
         )
 
-        st.info("Industry skill demand analysis will appear here.")
+        skill_data = {
+            "Skill": [
+                "Python",
+                "SQL",
+                "Cloud Computing",
+                "Machine Learning",
+                "Data Analysis",
+                "Docker",
+                "REST APIs",
+                "React",
+                "Cybersecurity",
+                "DevOps"
+            ],
+            "Demand": [
+                94,
+                89,
+                86,
+                82,
+                79,
+                73,
+                71,
+                68,
+                64,
+                61
+            ]
+        }
+
+        skill_df = __import__("pandas").DataFrame(skill_data)
+
+        # ---------- METRICS ----------
+
+        c1, c2, c3 = st.columns(3)
+
+        with c1:
+            st.metric("Industry Skills Tracked", "82")
+
+        with c2:
+            st.metric("High-Demand Skills", "24")
+
+        with c3:
+            st.metric("Emerging Skills", "13")
+
+        st.write("")
+
+        # ---------- DEMAND CHART ----------
+
+        st.markdown(
+            "### 🔥 Top Industry Skills"
+        )
+
+        fig = px.bar(
+            skill_df,
+            x="Demand",
+            y="Skill",
+            orientation="h",
+            text="Demand",
+            title="Relative Industry Demand"
+        )
+
+        fig.update_traces(
+            textposition="outside"
+        )
+
+        fig.update_layout(
+            xaxis_range=[0, 100],
+            xaxis_title="Demand Score",
+            yaxis_title="Industry Skill",
+            height=500
+        )
+
+        st.plotly_chart(
+            fig,
+            use_container_width=True
+        )
+
+        # ---------- DETAIL CARDS ----------
+
+        st.markdown(
+            "### 🔎 High-Priority Skills"
+        )
+
+        d1, d2, d3 = st.columns(3)
+
+        with d1:
+            st.markdown(
+                """
+                <div class="info-card">
+                    <b>🐍 Python</b><br><br>
+                    Demand Score: <b>94/100</b><br>
+                    Recommended across software, AI and data roles.
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+        with d2:
+            st.markdown(
+                """
+                <div class="info-card">
+                    <b>☁️ Cloud Computing</b><br><br>
+                    Demand Score: <b>86/100</b><br>
+                    Strong requirement for modern deployment
+                    and infrastructure roles.
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+        with d3:
+            st.markdown(
+                """
+                <div class="info-card">
+                    <b>🤖 Machine Learning</b><br><br>
+                    Demand Score: <b>82/100</b><br>
+                    Increasing requirement across AI-enabled
+                    industries.
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+    # ========================================================
+    # RECOMMENDATIONS
+    # ========================================================
 
     elif section == "recommendations":
 
         st.markdown(
-            '<div class="section-title">💡 Recommendations</div>',
+            '<div class="section-title">💡 Government Recommendations</div>',
             unsafe_allow_html=True
         )
+
+        # ---------- PRIORITY METRICS ----------
+
+        c1, c2, c3 = st.columns(3)
+
+        with c1:
+            st.metric("Priority Skills", "12")
+
+        with c2:
+            st.metric("Programs to Update", "9")
+
+        with c3:
+            st.metric("Recommended Modules", "18")
+
+        st.write("")
+
+        # ---------- RECOMMENDATION 1 ----------
 
         st.markdown(
             """
             <div class="recommendation">
                 <div class="recommendation-title">
-                    Priority Skill Development
+                    🔴 High Priority — Cloud & DevOps
                 </div>
                 <div class="recommendation-text">
-                    Consider adding practical modules, projects and
-                    certifications covering high-demand industry skills.
+                    Introduce practical modules covering Cloud Computing,
+                    Docker, DevOps and deployment workflows.
+                    Add hands-on projects using real-world infrastructure.
                 </div>
             </div>
             """,
-            unsafe_allow_html=True,
+            unsafe_allow_html=True
         )
+
+        st.write("")
+
+        # ---------- RECOMMENDATION 2 ----------
+
+        st.markdown(
+            """
+            <div class="recommendation">
+                <div class="recommendation-title">
+                    🟠 Medium Priority — AI & Data
+                </div>
+                <div class="recommendation-text">
+                    Strengthen curriculum coverage of Machine Learning,
+                    Data Analysis, Artificial Intelligence and NLP through
+                    practical assignments and industry projects.
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+        st.write("")
+
+        # ---------- RECOMMENDATION 3 ----------
+
+        st.markdown(
+            """
+            <div class="recommendation">
+                <div class="recommendation-title">
+                    🟢 Curriculum Enhancement — Software Development
+                </div>
+                <div class="recommendation-text">
+                    Increase practical exposure to Git, GitHub, REST APIs,
+                    React and modern software development workflows.
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+        st.write("")
+
+        # ---------- ACTION PLAN ----------
+
+        st.markdown(
+            "### 🛠️ Suggested Government Action Plan"
+        )
+
+        action_data = {
+            "Action": [
+                "Update curriculum modules",
+                "Introduce industry projects",
+                "Add certification pathways",
+                "Establish industry partnerships",
+                "Monitor skill demand quarterly"
+            ],
+            "Priority": [
+                "High",
+                "High",
+                "Medium",
+                "Medium",
+                "High"
+            ],
+            "Expected Impact": [
+                "High",
+                "High",
+                "Medium",
+                "High",
+                "High"
+            ]
+        }
+
+        action_df = __import__("pandas").DataFrame(action_data)
+
+        st.dataframe(
+            action_df,
+            use_container_width=True,
+            hide_index=True
+        )
+
+    # ========================================================
+    # REPORT
+    # ========================================================
 
     elif section == "report":
 
         st.markdown(
-            '<div class="section-title">📄 Report</div>',
+            '<div class="section-title">📄 Government Skill Alignment Report</div>',
             unsafe_allow_html=True
         )
 
-        st.info("Government skill alignment report will appear here.")
+        # ---------- REPORT SUMMARY ----------
+
+        c1, c2, c3, c4 = st.columns(4)
+
+        with c1:
+            st.metric("Programs", "24")
+
+        with c2:
+            st.metric("Skills Identified", "156")
+
+        with c3:
+            st.metric("Industry Skills", "82")
+
+        with c4:
+            st.metric("Skill Gaps", "31")
+
+        st.write("")
+
+        # ---------- REPORT CHART ----------
+
+        report_data = {
+            "Area": [
+                "Curriculum Coverage",
+                "Industry Alignment",
+                "Practical Exposure",
+                "Emerging Skills"
+            ],
+            "Score": [
+                78,
+                68,
+                59,
+                52
+            ]
+        }
+
+        report_df = __import__("pandas").DataFrame(report_data)
+
+        st.markdown(
+            "### 📊 Overall Skill Readiness"
+        )
+
+        fig = px.bar(
+            report_df,
+            x="Area",
+            y="Score",
+            text="Score",
+            title="Government Workforce Skill Readiness"
+        )
+
+        fig.update_traces(
+            textposition="outside"
+        )
+
+        fig.update_layout(
+            yaxis_range=[0, 100],
+            yaxis_title="Readiness Score (%)",
+            xaxis_title="Assessment Area",
+            height=420
+        )
+
+        st.plotly_chart(
+            fig,
+            use_container_width=True
+        )
+
+        # ---------- REPORT SUMMARY CARD ----------
+
+        st.markdown(
+            """
+            <div class="info-card large-info">
+                <b>📌 Executive Summary</b><br><br>
+
+                The analysis indicates that academic programs have
+                moderate alignment with current industry requirements.
+                The major improvement areas include Cloud Computing,
+                DevOps, AI, Data Analysis and modern software development.
+
+                <br><br>
+
+                Government institutions can use these insights to
+                prioritize curriculum updates, practical training,
+                industry partnerships and certification pathways.
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+        st.write("")
+
+        # ---------- REPORT DETAILS ----------
+
+        st.markdown(
+            "### 📋 Report Indicators"
+        )
+
+        report_details = {
+            "Indicator": [
+                "Curriculum-Industry Alignment",
+                "Technical Skill Coverage",
+                "Emerging Skill Coverage",
+                "Practical Learning Exposure",
+                "Overall Workforce Readiness"
+            ],
+            "Score": [
+                "68%",
+                "74%",
+                "52%",
+                "59%",
+                "65%"
+            ],
+            "Status": [
+                "Needs Improvement",
+                "Good",
+                "Needs Improvement",
+                "Needs Improvement",
+                "Moderate"
+            ]
+        }
+
+        report_details_df = __import__("pandas").DataFrame(
+            report_details
+        )
+
+        st.dataframe(
+            report_details_df,
+            use_container_width=True,
+            hide_index=True
+        )
 
 
 # ============================================================
