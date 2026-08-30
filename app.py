@@ -659,6 +659,94 @@ def government_dashboard():
     if "gov_section" not in st.session_state:
         st.session_state.gov_section = "overview"
 
+    # ========================================================
+    # GOVERNMENT DASHBOARD CONTENT
+    # ========================================================
+
+    section = st.session_state.gov_section
+
+    if section == "overview":
+
+        st.markdown(
+            '<div class="section-title">📊 Overview</div>',
+            unsafe_allow_html=True
+        )
+
+        col1, col2, col3, col4 = st.columns(4)
+
+        with col1:
+            st.metric("Programs Analyzed", "24")
+
+        with col2:
+            st.metric("Skills Identified", "156")
+
+        with col3:
+            st.metric("Industry Skills", "82")
+
+        with col4:
+            st.metric("Skill Gaps", "31")
+
+        st.markdown(
+            """
+            <div class="info-card large-info">
+                <b>Government Workforce Skill Intelligence</b><br><br>
+                SkillSync helps government institutions understand
+                curriculum-to-industry alignment and identify priority
+                skill gaps across academic programs.
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    elif section == "programs":
+
+        st.markdown(
+            '<div class="section-title">🏫 Programs</div>',
+            unsafe_allow_html=True
+        )
+
+        st.info("Program-level curriculum and skill alignment analysis.")
+
+    elif section == "demand":
+
+        st.markdown(
+            '<div class="section-title">📈 Skill Demand</div>',
+            unsafe_allow_html=True
+        )
+
+        st.info("Industry skill demand analysis will appear here.")
+
+    elif section == "recommendations":
+
+        st.markdown(
+            '<div class="section-title">💡 Recommendations</div>',
+            unsafe_allow_html=True
+        )
+
+        st.markdown(
+            """
+            <div class="recommendation">
+                <div class="recommendation-title">
+                    Priority Skill Development
+                </div>
+                <div class="recommendation-text">
+                    Consider adding practical modules, projects and
+                    certifications covering high-demand industry skills.
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    elif section == "report":
+
+        st.markdown(
+            '<div class="section-title">📄 Report</div>',
+            unsafe_allow_html=True
+        )
+
+        st.info("Government skill alignment report will appear here.")
+
 
 # ============================================================
 # GOVERNMENT PROGRAM ANALYSIS
