@@ -2471,22 +2471,19 @@ def curriculum_upload_page():
 
                     if missing:
 
-                        st.markdown(
-                            """
-                            <div class="recommendation">
-                                <div class="recommendation-title">
-                                    Improve Industry Readiness
-                                </div>
-
-                                <div class="recommendation-text">
-                                    Consider adding practical modules,
-                                    projects and certifications covering
-                                    the missing industry skills.
-                                </div>
+                        st.html("""
+                        <div class="recommendation">
+                            <div class="recommendation-title">
+                                Improve Industry Readiness
                             </div>
-                            """,
-                            unsafe_allow_html=True,
-                        )
+
+                            <div class="recommendation-text">
+                                Consider adding practical modules,
+                                projects and certifications covering
+                                the missing industry skills.
+                            </div>
+                        </div>
+                        """)
 
                     else:
 
